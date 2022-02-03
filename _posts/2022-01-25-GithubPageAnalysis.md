@@ -17,10 +17,10 @@ categories:
 
 여타 유투브 영상등을 통해 Minimal mistake와 같은 template을 fork해서 사이트를 만들었지만 코드 내용은 모르는 사람들을 타겟으로 한다.
 
-![Figure 1](/images/github_page_code.png "Figure 1"){: width="50%" height="50%" .align-center}
+![Figure 1](/assets/images/github_page_code.png "Figure 1"){: width="50%" height="50%" .align-center}
 *Figure 1. Code structure*
 
-![Figure 2](/images/index_html_render.png "Figure 2"){: width="100%" height="100%" .align-center}
+![Figure 2](/assets/images/index_html_render.png "Figure 2"){: width="100%" height="100%" .align-center}
 *Figure 2. Output HTML*
 
 우선 template을 fork하고 나면 Figure 1과 같은 code structure을 가진다. 
@@ -40,7 +40,7 @@ Github page를 만들고 가장 처음 접근하는 주소는 "https://user-name
 
 "https://user-name.github.io/"을 주소창에 치면 Figure 1의 code structure에서 /index.html 이 호출된다.
 
-![Figure 3](/images/index_html_code.png "Figure 3"){: width="100%" height="100%" .align-center}
+![Figure 3](/assets/images/index_html_code.png "Figure 3"){: width="100%" height="100%" .align-center}
 *Figure 3. index.html*
 
 Figure 3의 /index.html을 보니 원하던 html 코드는 없고 생뚱맞은 내용과 이를 감싸는 `---` 들로 구성되어 있다.
@@ -57,12 +57,12 @@ Figure 3의 /index.html을 보니 원하던 html 코드는 없고 생뚱맞은 �
 
 ## /&#95;layouts/home.html
 
-![Figure 4](/images/home_html.png "Figure 4"){: width="100%" height="100%" .align-center}
+![Figure 4](/assets/images/home_html.png "Figure 4"){: width="100%" height="100%" .align-center}
 *Figure 4. home.html*
 
 일단 Figure 4의 home.html을 보니까 뭔가 `<h3 class>` 나 `<div>` 등의 HTML code가 있다. 이게 실제로 어떻게 반영되는지 눈으로 확인해보자.
 
-![Figure 5](/images/home_html_render.png "Figure 5"){: width="100%" height="100%" .align-center}
+![Figure 5](/assets/images/home_html_render.png "Figure 5"){: width="100%" height="100%" .align-center}
 *Figure 5. home.html to HTML*
 
 참고로 Figure 5처럼 특정 부분의 HTML 소스코드를 보려면 특정 부분에 마우스를 대고 오른쪽 클릭 후 "검사"를 누르면 된다.
@@ -98,7 +98,7 @@ index.html에서 home.html로 넘어왔듯, 다시 한번 archive.html로 HTML �
 
 ## /&#95;layouts/archive.html
 
-![Figure 6](/images/archive_html.png "Figure 6"){: width="100%" height="100%" .align-center}
+![Figure 6](/assets/images/archive_html.png "Figure 6"){: width="100%" height="100%" .align-center}
 *Figure 6. archive.html*
 
 결론적으로 말하자면 home.html의 모든 코드가 archive.html의 {% raw %}`{{ content }}`{% endraw %}부분에 들어가게 된다.
@@ -113,7 +113,7 @@ index.html에서 home.html로 넘어왔듯, 다시 한번 archive.html로 HTML �
 
 ## /&#95;layouts/default.html
 
-![Figure 7](/images/default_html.png "Figure 7"){: width="100%" height="100%" .align-center}
+![Figure 7](/assets/images/default_html.png "Figure 7"){: width="100%" height="100%" .align-center}
 *Figure 7. default.html*
 
 드디어 Figure 2의 최종 HTML 파일을 완전히 구성하는 태초의 HTML을 발견했다.
