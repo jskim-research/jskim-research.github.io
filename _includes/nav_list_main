@@ -3,31 +3,24 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-        <span class="nav__sub-title">C/C++/C#</span>
+        <span class="nav__sub-title">C/C++</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "CPP" %}
+                    {% if category[0] == "Cpp" %}
                         <li><a href="/categories/cpp" class="">C ++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
 
-        <span class="nav__sub-title">Github</span>
+        <span class="nav__sub-title">C#</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Github" %}
-                        <li><a href="/categories/github" class="">Github({{category[1].size}})</a></li>
+                    {% if category[0] == "Csharp" %}
+                        <li><a href="/categories/cpp" class="">C# ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "GithubPage" %}
-                        <li><a href="/categories/github_page" class="">Github Page({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            
+            </ul>	
+
         <span class="nav__sub-title">Unity</span>
             <ul>
                 {% for category in site.categories %}
@@ -57,50 +50,32 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Algorithm Lesson 1" %}
-                        <li><a href="/categories/algorithm-lesson-1" class="">알고리즘 강의1 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/algorithm-lesson-1" class="">알고리즘 lesson 1 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">Coding Test</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CodingTest" %}
+                        <li><a href="/categories/coding_test" class="">문제 풀이 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">Github</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Github" %}
+                        <li><a href="/categories/github" class="">Github({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Algorithm Lesson 2" %}
-                        <li><a href="/categories/algorithm-lesson-2" class="">알고리즘 강의2 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Data Structure" %}
-                        <li><a href="/categories/data-structrue" class="">자료구조 강의 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Network" %}
-                        <li><a href="/categories/network" class="">네트워크 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">etc</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Design Pattern" %}
-                        <li><a href="/categories/design-pattern" class="">디자인 패턴 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Git" %}
-                        <li><a href="/categories/git" class="">Git & Github ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Blog" %}
-                        <li><a href="/categories/blog" class="">Blog Dev ({{category[1].size}})</a></li>
+                    {% if category[0] == "GithubPage" %}
+                        <li><a href="/categories/github_page" class="">Github Page({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
