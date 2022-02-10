@@ -17,19 +17,19 @@ categories:
 
 # Github repository 생성
 순서
-* github.com에서 new repository를 통해 remote repository를 생성한다.
-* remote repository를 복사하거나 기존 폴더에서 local repository를 생성한다.
+1. github.com에서 new repository를 통해 remote repository를 생성한다.
+2. remote repository를 복사하거나 기존 폴더에서 local repository를 생성한다.
   * `git clone [원격 저장소 주소]`
   * 기존 폴더에서 `git init`
 
-# 환경 설정
+# Git remote
 ## local repository와 remote repository 연결
 ```
 git remote add origin [remote repository 주소] or git remote add origin [branch 이름]
 git remote -v // remote repository와 연결 확인
 ```
 
-## git user 설정
+## Git config
 ```
 git config --global user.name "[사용자명]"
 git config --global user.email "[사용자이메일명]"
@@ -58,12 +58,29 @@ git revert [커밋 해시] // 지정한 커밋 해시의 변경 이력을 취소
 
 ## Push
 ```
-git push -u [저장소명] [브랜치명] // 보통 저장소명을 origin으로 한다. => -u를 붙여서 다음번엔 git push 만으로 가능하게 함
+// 보통 [저장소명] 을 origin으로 한다. => git remote를 통해 정확한 저장소명을 알아낼 수 있음
+git push [저장소명] [브랜치명] // 특정 저장소에 특정 브랜치의 코드 변경 이력을 올린다.
+git push -u [저장소명] [브랜치명] // -u를 붙이면 다음부터는 git push만으로 올릴 수 있다.
 ```
 
-만약 access deny가 발생한다면 [[2]]을 확인하자.
+Push 하기 전에 .gitignore 파일을 잘 추가했는지 확인하자. [[3]]
 
-그리고 Push 하기 전에 .gitignore 파일을 잘 추가했는지 확인하자. [[3]]
+그리고 push 과정에서 access deny가 발생한다면 [[2]]을 확인하자.
+
+## Branch
+```
+git branch // 로컬 branch 정보를 보여준다.
+git branch -v // 로컬 branch의 정보와 마지막 커밋 내역을 함께 보여준다.
+git branch -r // remote 저장소의 branch 정보를 보여준다.
+git branch -a // local/remote 저장소의 모든 branch 정보를 보여준다.
+git branch [브랜치명] // 로컬에 새로운 branch를 생성한다.
+git checkout -b [브랜치명] // branch 생성과 동시에 해당 branch로 이동한다.
+git checkout -t [remote 브랜치명] // remote에 있는 branch를 가져온다.
+git branch --merged // merge된 branch 표시 (merge 및 *가 표시되지 않은 branch는 삭제 가능)
+git branch --no-merged // 아직 merge 안된 branch 표시
+git branch -d [브랜치명] // branch를 삭제한다. 아직 merge하지 않은 커밋을 담고 있는 경우 강제 종료 옵션 -D를 써야함
+git branch -m [변경할 브랜치명] [변경될 브랜치명] // 브랜치 이름을 바꾼다. 
+```
 
 # Etc
 ## Github message convention [[1]]
